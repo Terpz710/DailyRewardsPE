@@ -1,0 +1,29 @@
+# Made by Terpz710 :p
+
+# {type} = The type of reward (daily, weekly and monthly)
+# {amount} = The amount of money received from the bank note
+# {days} = Days
+# {hours} = Hours
+# {minutes} = Minutes
+# {seconds} = Seconds
+
+# General messages
+player-only-command: "§l§f(§4!§f)§r§f This command can only be used by players."
+
+# BankNotes reward messages
+claimed-bank-note: "§l§f(§a!§f)§r§f You have claimed a bank note worth §a${amount}§f!"
+
+# Daily command messages
+claimed-daily-item: "§l§f(§b!§f)§r§f You have claimed your §bDaily§f item!"
+no-daily-rewards: "§l§f(§c!§f)§r§f No daily rewards available!"
+cooldown-message-daily: "§l§f(§e!§f)§r§f You can claim your §eDaily§f item in §e{hours}§f hours §e{minutes}§f minutes and §e{seconds}§f seconds!"
+
+# Weekly command messages
+claimed-weekly-item: "§l§f(§b!§f)§r§f You have claimed your §bWeekly§f item!"
+no-weekly-rewards: "§l§f(§c!§f)§r§f No weekly rewards available!"
+cooldown-message-weekly: "§l§f(§e!§f)§r§f You can claim your §eWeekly§f item in §e{days}§f days §e{hours}§f hours §e{minutes}§f minutes and §e{seconds}§f seconds!"
+
+# Monthly command messages
+claimed-monthly-item: "§l§f(§b!§f)§r§f You have claimed your §bMonthly§f item!"
+no-monthly-rewards: "§l§f(§c!§f)§r§f No monthly rewards available!"
+cooldown-message-monthly: "§l§f(§e!§f)§r§f You can claim your §eMonthly§f item in §e{days}§f days §e{hours}§f hours §e{minutes}§f minutes and §e{seconds}§f seconds!"
