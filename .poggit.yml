@@ -4,7 +4,7 @@ branches:
 - main
 projects:
   DailyRewardsPE:
-    path: “”
+    path: ""
     lint:
       phpstan: true
 ...
