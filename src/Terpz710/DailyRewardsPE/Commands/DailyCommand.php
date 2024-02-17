@@ -73,6 +73,11 @@ class DailyCommand extends Command implements PluginOwned {
     }
 
     private function giveReward(Player $player, array $rewardData) {
+        if ($this->bankNotesPlus === null || !($this->bankNotesPlus instanceof BankNotesPlus)) {
+            $player->sendMessage("BankNotesPlus plugin is not installed, Skipping bank note reward!");
+            return;
+        }
+
         if (isset($rewardData['is_bank_note']) && $rewardData['is_bank_note']) {
             $amount = $rewardData['amount'];
             $this->bankNotesPlus->convertToBankNote($player, $amount);
