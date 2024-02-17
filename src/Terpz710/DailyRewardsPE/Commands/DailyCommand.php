@@ -24,10 +24,10 @@ class DailyCommand extends Command implements PluginOwned {
     private $cooldowns;
     private $messages;
 
-    public function __construct(Main $plugin, BankNotesPlus $bankNotesPlus) {
+    public function __construct(Main $plugin) {
         parent::__construct("daily", "Claim your daily items");
         $this->plugin = $plugin;
-        $this->bankNotesPlus = $bankNotesPlus;
+        $this->bankNotesPlus = $this->plugin->getServer()->getPluginManager()->getPlugin("BankNotesPlus");
         $this->cooldowns = $plugin->getCooldowns();
         $this->messages = $plugin->getMessagesConfig();
         $this->setPermission("dailyrewardsplus.command.daily");
