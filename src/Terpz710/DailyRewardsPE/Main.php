@@ -40,7 +40,7 @@ class Main extends PluginBase implements Listener {
         $this->getServer()->getCommandMap()->registerAll("DailyRewardsPE", [
 			    new DailyCommand($this),
 			    new WeeklyCommand($this),
-                new MonthlyCommand($this)
+                            new MonthlyCommand($this)
 		    ]);
 
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
