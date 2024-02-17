@@ -30,7 +30,7 @@ class MonthlyCommand extends Command implements PluginOwned {
         $this->bankNotesPlus = $this->plugin->getServer()->getPluginManager()->getPlugin("BankNotesPlus");
         $this->cooldowns = $plugin->getCooldowns();
         $this->messages = $plugin->getMessagesConfig();
-        $this->setPermission("dailyrewardsplus.command.monthly");
+        $this->setPermission("dailyrewardspe.command.monthly");
     }
 
     public function getOwningPlugin(): Plugin {
