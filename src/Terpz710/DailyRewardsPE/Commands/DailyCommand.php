@@ -30,7 +30,7 @@ class DailyCommand extends Command implements PluginOwned {
         $this->bankNotesPlus = $this->plugin->getServer()->getPluginManager()->getPlugin("BankNotesPlus");
         $this->cooldowns = $plugin->getCooldowns();
         $this->messages = $plugin->getMessagesConfig();
-        $this->setPermission("dailyrewardsplus.command.daily");
+        $this->setPermission("dailyrewardspe.command.daily");
     }
 
     public function getOwningPlugin(): Plugin {
