@@ -74,7 +74,7 @@ class WeeklyCommand extends Command implements PluginOwned {
 
     private function giveReward(Player $player, array $rewardData) {
         if ($this->bankNotesPlus === null || !($this->bankNotesPlus instanceof BankNotesPlus)) {
-            $player->sendMessage("BankNotesPlus plugin is not available. Skipping bank note reward.");
+            $player->sendMessage("BankNotesPlus plugin is not installed, Skipping bank note reward!");
             return;
         }
 
