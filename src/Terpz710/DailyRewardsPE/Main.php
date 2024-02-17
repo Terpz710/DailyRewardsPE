@@ -37,15 +37,11 @@ class Main extends PluginBase implements Listener {
         $cooldownsPath = $cooldownsFolder . DIRECTORY_SEPARATOR . "cooldowns.json";
         $this->cooldowns = new Config($cooldownsPath, Config::JSON);
 
-        $bankNotesPlus = $this->getServer()->getPluginManager()->getPlugin("BankNotesPlus");
-
-        if ($bankNotesPlus !== null) {
-            $this->getServer()->getCommandMap()->register("daily", new DailyCommand($this, $bankNotesPlus));
-            $this->getServer()->getCommandMap()->register("weekly", new WeeklyCommand($this, $bankNotesPlus));
-            $this->getServer()->getCommandMap()->register("monthly", new MonthlyCommand($this, $bankNotesPlus));
-        } else {
-            $this->getLogger()->error("BankNotesPlus plugin not found. Make sure it's installed and enabled.");
-        }
+        $this->getServer()->getCommandMap()->registerAll("DailyRewardsPE", [
+			    new DailyCommand($this),
+			    new WeeklyCommand($this),
+                new MonthlyCommand($this)
+		    ]);
 
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
     }
