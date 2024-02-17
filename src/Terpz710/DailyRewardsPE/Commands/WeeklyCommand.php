@@ -30,7 +30,7 @@ class WeeklyCommand extends Command implements PluginOwned {
         $this->bankNotesPlus = $this->plugin->getServer()->getPluginManager()->getPlugin("BankNotesPlus");
         $this->cooldowns = $plugin->getCooldowns();
         $this->messages = $plugin->getMessagesConfig();
-        $this->setPermission("dailyrewardsplus.command.weekly");
+        $this->setPermission("dailyrewardspe.command.weekly");
     }
 
     public function getOwningPlugin(): Plugin {
